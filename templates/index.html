@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ name}}'s Page</title>
+    <title>{{ user.name}}'s Page</title>
     <link rel="icon" href="{{ url_for('static',filename='favicon.ico')}}">
     <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}" type="text/css">
 </head>
 <body>
     <img  alt="Avatar" class="avatar" src="{{ url_for('static',filename='/images/avatar.png')}}">
-    <h2>{{ name }}'s Contnet</h2>
+    <h2>{{ user.name }}'s Contnet</h2>
     <p>{{ movies|length }} Titles</p>
     <ul class="movie-list">
         {% for movie in movies %}
